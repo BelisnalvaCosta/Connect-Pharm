@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Gerenciamento de Farmácia</title>
+    <link rel="stylesheet" href="styles/gerenc-pharm.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Medicamento</h2>
+        <input type="text" id="nome" placeholder="Nome do Medicamento" required>
+        <input type="number" id="quantidadeEstoque" placeholder="Quantidade em Estoque" required>
+        <input type="number" id="quantidadeSaida" placeholder="Quantidade de Saída" required>
+        <input type="number" id="preco" placeholder="Preço (R$)" required>
+        <input type="text" id="localidadeFarmacia" placeholder="Localidade da Farmácia" required>
+        <button onclick="cadastrarMedicamento()">Cadastrar</button>
+    </div>
+
+    <div class="container" id="relatorio">
+        <h2>Relatório de Estoque</h2>
+        <input type="text" id="busca" placeholder="Buscar medicamento..." oninput="buscarMedicamento()">
+        <button onclick="exportarCSV()">Exportar CSV</button>
+        <ul id="listaMedicamentos"></ul>
+    </div><br>
+    <button onclick="window.location.href='home.html'">Voltar</button>
+    <button onclick="window.location.href='buscar_medicamento.html'">Buscar</button>
+
+    <script src="script.js/gerenc-pharm.js"></script>
+</body>
+</html>

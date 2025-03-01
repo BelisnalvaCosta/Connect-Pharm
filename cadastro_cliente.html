@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Cadastro de Cliente</title>
+  <link rel="stylesheet" href="styles/cliente.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Cliente</h1>
+  </header>
+  <main>
+    <form id="cadastro-cliente-form">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+      
+      <button type="button" onclick="cadastrarCliente()">Cadastrar</button>
+    </form>
+  </main>
+  <header>
+    <h1>Detalhes do Cadastro 101</h1>
+  </header>
+  
+  <main>
+    <p>O cadastro 2024/0001 está vinculado à Central Farmácia Bella's-PR. Este cadastro refere-se a uma consulta de medicamentos disponível.</p>
+    <button onclick="navigateBack()">Voltar à tela principal</button>
+  </main>
+
+  <script>
+    function navigateBack() {
+      window.location.href = 'home.html';
+    }
+  </script>
+  <script src="script/cliente.js"></script>
+</body>
+</html>

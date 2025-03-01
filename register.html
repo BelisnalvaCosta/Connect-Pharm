@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Controle de Acesso</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastrar-se</h2>
+        <form id="register-form">
+            <label for="username">Usuário:</label>
+            <input type="text" id="register-username" required>
+            
+            <label for="password">Senha:</label>
+            <input type="password" id="register-password" required>
+            
+            <label for="role">Tipo de Usuário:</label>
+            <select id="role" name="role">
+              <option value="cliente">Cliente</option>
+              <option value="admin">Administrador</option>
+            </select>  
+
+            <button type="button" onclick="register()">Cadastrar</button>
+        </form>
+        <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+    </div>
+
+    <script>
+        function register() {
+            const username = document.getElementById('register-username').value;
+            const password = document.getElementById('register-password').value;
+
+            if (username && password) {
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+                const userExists = users.some(user => user.username === username);
+
+                if (userExists) {
+                    alert('Usuário já cadastrado!');
+                } else {
+                    users.push({ username, password });
+                    localStorage.setItem('users', JSON.stringify(users));
+                    alert('Cadastro realizado com sucesso!');
+                    window.location.href = 'login.html';
+                }
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        }
+    </script>
+</body>
+</html>
