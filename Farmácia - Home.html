@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://127.0.0.1:5501/frontend/public/home.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Farmácia - Home_files/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="./Farmácia - Home_files/jquery.min.js.download" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Farmácia - Home</title>
+    <link rel="stylesheet" href="./Farmácia - Home_files/home.css">
+<meta id="acfifjfajpekbmhmjppnmmjgmhjkildl"></head>
+<body>
+    <header>
+        <h1>Bem-vindo à Farmácia Fictícia - Connect Pharm</h1>
+        <p>Sistema de controle e acesso ao estoque de medicamentos.</p>
+    </header>
+    <nav>
+        <ul>
+            <!-- connect Pharm -->            
+            <li><a href="http://127.0.0.1:5501/frontend/public/cadastro_cliente.html">Cadastro Cliente</a></li>
+            <li><a href="http://127.0.0.1:5501/frontend/public/login.html">Login</a></li>
+            <li><a href="http://127.0.0.1:5501/frontend/public/buscar_medicamento.html">Buscar Medicamento</a></li>
+            <li><a href="http://127.0.0.1:5501/frontend/public/cadastro2_cliente.html">Cadastro Cliente 2</a></li>
+            <li><a href="http://127.0.0.1:5501/frontend/public/central_medicamentos-index.html">Central Medicamentos</a></li>
+            <!-- abaixo corrigir -->
+            <li><a href="http://127.0.0.1:5501/frontend/public/home.html">Home</a></li>            
+            <li><a href="http://127.0.0.1:5501/frontend/public/gerenc-farm-index.html">Gerenciamento de Estoque</a></li>
+            <li><a href="http://127.0.0.1:5501/frontend/public/buscar_medicamento-cliente.html">Buscar Medicamento - Cliente</a></li>
+            <li><a href="http://127.0.0.1:5501/frontend/public/buscar_estoque.html">Buscar Estoque</a></li>
+            
+        </ul>
+    </nav>
+    <section>
+        <h2>Gerencie seu estoque com eficiência!</h2>
+        <p>Faça login para acessar as funcionalidades de controle de medicamentos.</p>        
+        <button onclick="window.location.href=&#39;login.html&#39;">Acessar Sistema</button>        
+    </section>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
