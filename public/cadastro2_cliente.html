@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>cadastro2 Cliente</title>
+    <link rel="stylesheet" href="styles/cliente2.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Cliente 2 - contatos</h1>
+      </header>
+    <form id="formCliente">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="tel" id="telefone" placeholder="Telefone" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+        <input type="text" id="endereco" placeholder="Endereço" required>
+        <button type="submit">Cadastrar</button>
+        <br>
+        <button onclick="navigateBack()">Voltar à tela principal</button>
+    </form>
+    
+    <script>
+    document.getElementById("formCliente").addEventListener("submit", async (e) => {
+        e.preventDefault();
+    
+        const cliente = {
+            nome: document.getElementById("nome").value,
+            telefone: document.getElementById("telefone").value,
+            email: document.getElementById("email").value,
+            senha: document.getElementById("senha").value,
+            endereco: document.getElementById("endereco").value
+        };
+    
+        const res = await fetch("http://localhost:3000/cadastro2_cliente", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(cliente)
+        });
+    
+        const data = await res.json();
+        alert(data.message);
+    });
+    
+    function navigateBack() {
+      window.location.href = 'home.html';
+    }
+    </script>      
+</body>
+</html>

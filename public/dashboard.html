@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo, <span id="user"></span>!</h1>
+        <button onclick="logout()">Sair</button>        
+    </div>
+
+    <script>
+        // Verifica se o usuário está logado
+        const currentUser = localStorage.getItem("currentUser");
+        if (!currentUser) {
+            alert("Você precisa fazer login para acessar esta página.");
+            window.location.href = "login.html"; // Redireciona para login se não estiver logado
+        } else {
+            document.getElementById("user").innerText = currentUser; // Exibe o nome do usuário
+        }
+
+        function logout() {
+            localStorage.removeItem("currentUser"); // Remove o usuário atual
+            alert("Você saiu da sua conta.");
+            window.location.href = "login.html";
+        }
+         // coloquei para navegar
+        function navigateBack() {
+        window.location.href = 'central_medicamentos.html'; 
+        window.location.href = 'dashboard.html'; 
+        }
+    </script>
+</body>
+</html>

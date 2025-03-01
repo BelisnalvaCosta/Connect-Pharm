@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Buscar Medicamento</title>
+    <link rel="stylesheet" href="styles/buscar.css">
+    <script defer src="script/buscar.js"></script>
+</head>
+<body>
+    <h2>Buscar Medicamento</h2>
+    <form id="buscar-form">
+        <input type="text" id="medicamento" placeholder="Nome do medicamento" required>
+        <button type="submit">Buscar</button>
+    </form>
+    <p id="resultado"></p>
+    <br>
+<!-- outra parte da busca por medicamento -->
+
+</head>
+  <body>
+    <header>
+      <h1>Central de Medicamentos - Adicionar</h1>
+    </header>  
+    <main>
+      <div class="form">
+      <form action="buscar_estoque.html" method="get"> <!-- para ficar protegido é melhor o post -->
+        <label for="name">Name:</label>
+        <input type="text" id="name-input">
+        <button id="add-mame-btn">Adicionar Medicamento</button>
+        <br><br>
+    
+        <div>
+          <input placeholder="search by name" id="search-input">
+          <button id="search-input">Search</button>
+        </div>
+    
+        <table id="medicamentos-table">
+          <h2>Adicionar/Atualizar Produto</h2>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" required><br>
+  
+          <label for="estoque">Quantidade em Estoque:</label>
+          <input type="number" id="estoque" required><br>
+  
+          <label for="saida">Quantidade de Saída:</label>
+          <input type="number" id="saida" required><br>
+  
+          <label for="preco">Preço (R$):</label>
+          <input type="number" id="preco" step="0.01" required><br>
+  
+          <label for="localidade">Localidade:</label>
+          <input type="text" id="localidade" required><br>
+  
+          <button type="submit" id="btnSalvar">Salvar</button>
+          <br><br>
+  
+          <table id="medicamentos-table" border="1">
+              <caption>Controle de Estoque</caption>
+              <thead>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Qtde em Estoque</th>
+                  <th>Qtde de Saída</th>
+                  <th>Preço</th>
+                  <th>Localidade</th>
+                  <th>Editar</th>                
+                  <th>Deletar</th>
+              </thead>
+              <tbody>
+                  <td colspan="8">No Data</td>
+              <!-- Os dados serão inseridos dinamicamente -->
+      
+              </tbody>
+          </table>
+          
+          <!-- Formulário para Adicionar/Atualizar Produto -->
+  
+      </main>
+      <script src="script.js/buscar.js"></script>     
+  </body>
+</html> 

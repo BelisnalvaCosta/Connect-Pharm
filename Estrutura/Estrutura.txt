@@ -1,0 +1,22 @@
+/connectPharm
+│── /public
+│   ├── index.html
+│   ├── login.html
+│   ├── cadastro_cliente.html
+│   ├── cadastro_medicamento.html
+│   ├── buscar_medicamento.html
+│   ├── styles.css
+│   └── script.js
+│── /server
+│   ├── database.js
+│   ├── server.js
+│── package.json
+│── package-lock.json
+
+Este projeto foi feito em etapas:
+
+Primeiro etapa:
+Em HTLM, JavaScript e CSS puro para pôr no Github page (Protótipo).
+
+Segunda etapa:
+Acrescentar o banco de dados MySQL, modules node.js e server.js - rotas - para o bom funcionamento do Projeto.
