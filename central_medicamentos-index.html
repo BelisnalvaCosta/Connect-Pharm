@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central de Medicamentos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="styles/central-medicamentos.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Central de Medicamentos - REGISTRE</h1>
+  </header>
+  <main>
+    <form id="login-form">
+      <h2>Login</h2>
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <label for="role">Tipo de Usuário:</label>
+      <select id="role" name="role">
+        <option value="cliente">Cliente</option>
+        <option value="admin">Administrador</option>
+      </select>
+      
+      <!-- <button type="button" onclick="login()">Entrar</button> -->
+      <button onclick="window.location.href='cadastro_cliente.html'">Entrar</button>
+      <button type="button" onclick="navigateBack()"><a href="home.html"></a>register</button>
+      <button type="button" onclick="navigateBack()"><a href="gerenc-index.html"></a>Gerenciamento de Estoque</button>
+    </form>
+  </main>
+  <div class="carrossel">
+    <div class="slide">Medicamento 1: Disponível</div>
+    <div class="slide">Medicamento 2: Faltoso</div>
+    <div class="slide">Medicamento 3: Estoque Crítico</div>
+  </div>
+  
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+  
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+      });
+    }
+  
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+  
+    setInterval(nextSlide, 3000);
+    showSlide(currentSlide);
+  </script>
+
+  <script src="login.html"></script>  
+  <script src="home.html"></script>
+  <script src="#"></script> 
+    <footer>
+       
+    </footer>
+  <script src="script.js/central-medicamentos.js"></script>
+</body>
+</html>
